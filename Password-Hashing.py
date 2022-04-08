@@ -3,6 +3,7 @@ from tkinter import *
 import bcrypt
 
 def validate(entered_password):
+    #my password = "foobar"
     hash = b'$2b$12$c0yvMNCYGxIdm.WAt42wd.cUydXSEjx22t0xYbtIsfIwWSjjlhh9C'
     entered_password = bytes(entered_password, encoding='utf-8')
     if bcrypt.checkpw(entered_password, hash):
